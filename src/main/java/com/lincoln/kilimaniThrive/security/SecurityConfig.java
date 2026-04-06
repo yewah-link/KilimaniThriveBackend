@@ -42,6 +42,7 @@ public class SecurityConfig {
                         ).permitAll()
                         // Publicly accessible POST endpoints
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/v1/prayer-requests").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/v1/sessions").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/v1/prayer-requests/*/like").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.POST, "/api/v1/blog/*/like").permitAll()
                         // Require authentication for other data modifications and media uploads
